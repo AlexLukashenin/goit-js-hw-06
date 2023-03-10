@@ -12,3 +12,26 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listEl = document.querySelector(".gallery")
+//перебирання та створення тегів, зміна коми на пробіл
+const imagesEl = images
+  .map(
+    (image) =>
+      `<li><img class = "picture" src = "${image.url}" width = "350" alt = "${image.alt}"</li>`
+  )
+  .join(" ");
+//додаваання розмітки
+listEl.insertAdjacentHTML("beforeend", imagesEl);
+//додавання стилів
+// const photo = document.querySelectorAll(".picture")
+
+listEl.style.display = "flex";
+listEl.style.gap = "25px";
+listEl.style.backgroundColor = "green";
+listEl.style.padding = "40px";
+listEl.style.justifyContent = "center";
+listEl.style.alignItems = "center";
+listEl.style.listStyleType = "none";
+listEl.style.borderRadius = "10px";
+listEl.style.flexDirection = "colum";
