@@ -6,7 +6,7 @@ inputEl.addEventListener('input', event => {
   //присвоєння значення input в output
   outputEl.textContent = event.target.value;
   
-  if (event.target.value === " ") {
+  if (event.target.value === "") {
     outputEl.textContent = "Anonymous";
   }
 });
